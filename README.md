@@ -38,7 +38,6 @@ The platform provides secure authentication, property listing management, and a 
 
 **Other Tools**
 
-* Cloudinary (Image Storage)
 * MongoDB Atlas (Database Hosting)
 * Git & GitHub (Version Control)
 
