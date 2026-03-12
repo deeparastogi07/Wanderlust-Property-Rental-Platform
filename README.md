@@ -5,7 +5,7 @@ The platform provides secure authentication, property listing management, and a 
 
 ---
 
-## 🚀 Features
+## Features
 
 * User authentication and authorization using Passport.js
 * Create, edit, and delete property listings
@@ -43,7 +43,7 @@ The platform provides secure authentication, property listing management, and a 
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 1. Clone the repository
 
@@ -77,7 +77,7 @@ http://localhost:3000
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 Wanderlust-Property-Rental-Platform
@@ -95,7 +95,7 @@ Wanderlust-Property-Rental-Platform
 
 ---
 
-## 🎯 Future Improvements
+## Future Improvements
 
 * Payment integration
 * Property booking system
@@ -104,7 +104,7 @@ Wanderlust-Property-Rental-Platform
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 Deepa Rastogi
 Computer Science Undergraduate
