@@ -105,7 +105,6 @@ Wanderlust-Property-Rental-Platform
 ---
 
 ## Author
-
-* Deepa Rastogi
-* Computer Science Undergraduate
-* Aspiring Software Developer
+Deepa Rastogi, 
+Computer Science Undergraduate, 
+Aspiring Software Developer
