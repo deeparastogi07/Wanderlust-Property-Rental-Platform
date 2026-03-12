@@ -1,5 +1,3 @@
-# Wanderlust-Property-Rental-Platform
-
 # Wanderlust – Property Rental Platform
 
 A full-stack web application that allows users to explore, list, and review rental properties.
