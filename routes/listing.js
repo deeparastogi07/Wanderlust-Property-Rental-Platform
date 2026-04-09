@@ -33,12 +33,21 @@ router.get("/new", isLoggedIn, wrapAsync(async (req, res) => {
 // CREATE Route
 router.post("/", isLoggedIn, validateListing, wrapAsync(async (req, res, next) => {
     const newListing = new Listing(req.body.listing);
-    if (typeof req.body.listing.image === "string") {
+    newListing.owner = req.user._id;
+
+    const imageUrl = req.body.listing.image;
+    if (imageUrl && typeof imageUrl === "string" && imageUrl.trim() !== "") {
         newListing.image = {
-            url: req.body.listing.image,
+            url: imageUrl.trim(),
+            filename: "listingimage"
+        };
+    } else {
+        newListing.image = {
+            url: "https://images.unsplash.com/photo-1625505826533-5c80aca7d157?w=1200",
             filename: "listingimage"
         };
     }
+
     await newListing.save();
     req.flash("success", "New Listing Created");
     res.redirect("/listings");
@@ -47,11 +56,14 @@ router.post("/", isLoggedIn, validateListing, wrapAsync(async (req, res, next) =
 // SHOW Route
 router.get("/:id", wrapAsync(async (req, res) => {
     let { id } = req.params;
-    const listing = await Listing.findById(id).populate("reviews");
+    const listing = await Listing.findById(id)
+        .populate("reviews")
+        .populate("owner");
     if (!listing) {
         req.flash("error", "Listing You requested does not exist!");
         res.redirect("/listings");
     }
+    console.log(listing);
     res.render('./listings/show.ejs', { listing });
 }));
 
